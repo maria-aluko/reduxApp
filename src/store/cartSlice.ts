@@ -17,9 +17,12 @@ const cartSlice = createSlice({
       } else {
         state.items.push({...action.payload, quantity: 1})
       }
+    },
+    toggleCart: (state) => {
+      state.isOpen = !state.isOpen;
     }
   },
 })
-export const {addToCart} = cartSlice.actions;
+export const {addToCart, toggleCart} = cartSlice.actions;
 
 export default cartSlice.reducer;
