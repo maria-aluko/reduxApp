@@ -8,7 +8,6 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
   return response.data
 })
 
-
 const productsSlice = createSlice({
   name: 'products',
   initialState: [] as Product[],
@@ -24,3 +23,14 @@ export default productsSlice.reducer;
 
 // extraReducers for APIs
 // (state, action) state as _
+
+// initialState: [
+//   {
+//     id: 1,
+//     title: 'Product 1',
+//     price: 50,
+//     description: "Description 1",
+//     category: 'Category 1',
+//     image: 'https://via.placeholder.com/150'
+//   }
+// ] as Product[],
